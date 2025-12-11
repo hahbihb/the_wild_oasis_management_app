@@ -23,7 +23,6 @@ function UpdateUserDataForm() {
   const { updateUser, isUpdating } = useUpdateUser();
 
   function handleSubmit(e) {
-    console.log(isUpdating);
     e.preventDefault();
     if (!fullName) return;
 
