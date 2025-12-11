@@ -4,6 +4,7 @@ import Form from "../../ui/Form";
 import FormRow from "../../ui/FormRow";
 import Input from "../../ui/Input";
 import { useSignup } from "./useSignup";
+import toast from "react-hot-toast";
 
 // Email regex: /\S+@\S+\.\S+/
 
@@ -13,12 +14,13 @@ function SignupForm() {
   const { errors } = formState;
 
   function onSubmit({ fullName, email, password }) {
-    signup(
-      { fullName, email, password },
-      {
-        onSettled: () => reset(),
-      }
-    );
+    // signup(
+    //   { fullName, email, password },
+    //   {
+    //     onSettled: () => reset(),
+    //   }
+    // );
+    toast.error("You can't create a new user right now unfortunately");
   }
 
   return (
